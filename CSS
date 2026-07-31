@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Contemporary Burmese Periodical Style Sheet
+   ========================================================================== */
+
+:root {
+    --bg-color: #fcfbf9;
+    --text-primary: #111111;
+    --text-muted: #555555;
+    --accent-red: #9e1b1b;
+    --border-color: #d8d3c9;
+    --font-heading: 'Playfair Display', 'Noto Serif Myanmar', serif;
+    --font-body: 'Source Sans 3', 'Padauk', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+/* Article Container */
+.magazine-article {
+    max-width: 820px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Header Styling */
+.article-header {
+    border-bottom: 3px double var(--text-primary);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.category-tag {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--accent-red);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.article-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.article-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Typography */
+h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+    word-break: break-word;
+}
+
+.lead-paragraph::first-letter {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    float: left;
+    line-height: 0.8;
+    margin-right: 12px;
+    color: var(--accent-red);
+}
+
+/* Pull Quote */
+.pull-quote {
+    margin: 35px 0;
+    padding: 20px 30px;
+    border-top: 2px solid var(--accent-red);
+    border-bottom: 2px solid var(--accent-red);
+    background-color: #faf8f5;
+    text-align: center;
+}
+
+.pull-quote p {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-style: italic;
+    color: #222222;
+    margin-bottom: 0;
+}
+
+/* Images and Media Formatting */
+figure {
+    margin: 25px 0;
+}
+
+.editorial-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter 0.3s ease;
+}
+
+.editorial-img:hover {
+    filter: grayscale(0%);
+}
+
+.hero-image-container {
+    margin-bottom: 35px;
+}
+
+.hero-img {
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.full-width-image {
+    width: 100%;
+    margin: 35px 0;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-style: italic;
+    border-left: 2px solid var(--accent-red);
+    padding-left: 10px;
+}
+
+/* Layout Floats for In-Line Editorial Media */
+.inline-image {
+    width: 45%;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+/* Clearfix for Floated Content */
+.article-body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.article-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 680px) {
+    .magazine-article {
+        padding: 20px 25px;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .inline-image {
+        width: 100%;
+        float: none;
+        margin: 20px 0;
+    }
+}
